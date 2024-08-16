@@ -65,7 +65,7 @@ body {
 }
 
 #about i {
-    color: #007bff; /* Change icon color if needed */
+    color: #04b4e0; /* Change icon color if needed */
 }
 
 #about h4 {
@@ -430,6 +430,25 @@ footer {
 
 i {
     margin-right: 8px;
+}
+
+a {
+    color: #04b4e0;
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  color: #0288b7; /* Slightly darker shade for hover effect */
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Navbar link styling */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #b8b8b8;
 }
 
 html {
