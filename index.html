@@ -1,22 +1,493 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Baumannweb</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-	<p> hi   
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baumannweb - Christian Baumann</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Christian Baumann</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="display-4 live-typing" id="typing-text"></h1>
+            <div id="carouselSubtitle" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="lead">&#x1F468&#x200D&#x1F4BB; IT-Guy &#128187;</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead">&#x1F468&#x200D&#x1F692; Firefighter &#128658;</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead">&#x1F468&#x200D&#x1F469&#x200D&#x1F467&#x200D&#x1F467; Dad of two &#x1F468&#x200D&#x1F469&#x200D&#x1F467&#x200D&#x1F467;</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="lead">&#128145; Husband &#128107;</p>
+                    </div>
+                </div>
+                <!-- Remove carousel controls -->
+                <!-- <a class="carousel-control-prev" href="#carouselSubtitle" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselSubtitle" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="img/your-picture.jpg" alt="Your Name" class="img-fluid rounded-circle mb-3" width="200">
+                </div>
+                <div class="col-md-8">
+                    <h2>About Me</h2>
+                    <p>I'm a IT-Guy &#128187;, Volunteer Firefighter &#128658;, Husband &#128145; and father of two &#x1F468&#x200D&#x1F469&#x200D&#x1F467&#x200D&#x1F467; from Wörth am Rhein &#127968;, Rhineland-Palatinate, Germany &#x1F1E9&#x1F1EA;.</p>
+                    <br>
+
+                    <h3>What I Do</h3>
+                    <div class="row">
+                        <!-- Current Workplace -->
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-briefcase fa-3x mr-3"></i>
+                                <div>
+                                    <h4>Work</h4>
+                                    <p>Working at 1&1 since 2019. Started as a Sr. Systems Administrator and since September 2024 Teamlead of an IT-Operations team. Company first aider since 2020.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Firefighting -->
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-fire-extinguisher fa-3x mr-3"></i>
+                                <div>
+                                    <h4>Firefighting</h4>
+                                    <p>Besides my job and family, I'm a firefighter at the Wörth am Rhein Volunteer Fire Department.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Family -->
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-users fa-3x mr-3"></i>
+                                <div>
+                                    <h4>Family</h4>
+                                    <p>In my spare time I enjoy to rediscover the world through my kids eyes together with my family.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cooking -->
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-utensils fa-3x mr-3"></i>
+                                <div>
+                                    <h4>Cooking</h4>
+                                    <p>I love cooking. I prefer fresh and high quality meals - thats why I love making everything possible by myself and I'm always looking forward to explore new recepies.
+                                        As the son of three generations of bakers, I'm passionate about selfmade bread - especially with sourdough.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fun Facts -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+
+                        <div class="block-title">
+                            <h3>Fun <span>Facts</span></h3>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                        <div class="fun-fact gray-default">
+                            <i class="fas fa-mug-hot"></i>
+                            <h4>Avg. coffees per day</h4>
+                            <span class="fun-fact-block-value">3+</span>
+                            <span class="fun-fact-block-text"></span>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4">
+                        <div class="fun-fact gray-default">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>Yrs. working experience</h4>
+                            <span class="fun-fact-block-value">17</span>
+                            <span class="fun-fact-block-text"></span>
+                        </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 ">
+                        <div class="fun-fact gray-default">
+                            <i class="fas fa-calendar"></i>
+                            <h4>Yrs. voluntary service</h4>
+                            <span class="fun-fact-block-value">5+</span>
+                            <span class="fun-fact-block-text"></span>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- End of Fun Facts -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-5 bg-light">
+        <div class="container">
+            <div class="page-title">
+                <h2>Resume</h2>
+              </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-7">
+
+                  <div class="block-title">
+                    <h3>Experience</h3>
+                  </div>
+
+                  <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline-item clearfix">
+                        <div class="left-part">
+                          <h5 class="item-period">2024-08 - Current</h5>
+                          <span class="item-company">1&1</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right-part">
+                          <h4 class="item-title">Head of Data Services Operations</h4>
+                          <p>Teamlead of an IT-Operations team thats resp. to serve miscellaneous data services. Try to keep the team's back free, organizing stuff and more. Still passionate about automating stuff. Company first aider.</p>
+                        </div>
+                      </div>
+
+                    <div class="timeline-item clearfix">
+                    <div class="left-part">
+                        <h5 class="item-period">2019-02 - Current</h5>
+                        <span class="item-company">Volunteer Fire Dept. Wörth am Rhein</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right-part">
+                        <h4 class="item-title">Firefighter</h4>
+                        <p>Making hot stuff cold again. Firefighter, Responsible for SCBA at the Wörth side, deputy drone unit leader, Truck driver, SCBA and Chemical protection suit Firefighter, operating the Powersaw and many more.</p>
+                    </div>
+                    </div>     
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2019-09 - 2024-08</h5>
+                        <span class="item-company">1&1</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Sr. System Administrator</h4>
+                        <p>Automating with Ansible, Puppet, GoCD, GitlabCI and K8s. Keeping the high available Linux Systems running. BSI-KritisV service and ISO/IEC 27001 certified. Resp. for internal projects. Take over on-call duties. Company first aider.</p>
+                      </div>
+                    </div>                   
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2019-03 - 2019-08</h5>
+                        <span class="item-company">AXOOM</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">DevOps Engineer</h4>
+                        <p>Automating with GitlabCI, Helm, Terraform and deploying to GKE/K8s.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2016-12 - 2019-02</h5>
+                        <span class="item-company">BrandMaker</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">Systems Engineer</h4>
+                        <p>Automating with Ansible and GitlabCI. Administration of VMware, Linux, Windows and Veeam servers. Administration of Network devices.</p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2016-04 - 2016-11</h5>
+                        <span class="item-company">EBI Computerlösungen</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">IT-Specialist</h4>
+                        <p>Administration of VMware, Linux, Windows and Veeam servers. Administration of Network devices. Development of Linux-based products like a thin-clinet for customers. Planning and implementation of customer projects.</p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2014-05 - 2016-03</h5>
+                        <span class="item-company">Infokom</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">IT-Specialist</h4>
+                        <p>Administration of VMware, Linux, Windows and Veeam servers. Administration of Network devices. Planning and implementation of customer projects.</p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2012-07 - 2014-04</h5>
+                        <span class="item-company">VICCON</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">System Administrator</h4>
+                        <p>Administration of VMware, Linux, Windows and Veeam servers. Administration of Network devices. Hardware Purchase and repair. Customer projects. ISO/IEC 27001 certified company. </p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2010-07 - 2012-07</h5>
+                        <span class="item-company">Hochschule Karlsruhe - University of applied sciences</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">IT-Specialist</h4>
+                        <p>Administration of Linux and Windows servers. Administration of Desktops. System imaging for facultys computer labs. Hardware purchase and repairs. Helpdesk</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-title">
+                    <h3>Education</h3>
+                  </div>
+                  
+                  <div class="timeline timeline-second-style clearfix">
+                    <div class="timeline-item clearfix">
+                      <div class="left-part">
+                        <h5 class="item-period">2007-2010</h5>
+                        <span class="item-company">Heinrich-Hertz-Schule Karlsruhe & Karlsruhe Institute of Technology</span>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="right-part">
+                        <h4 class="item-title">IT-Specialist</h4>
+                        <p>Vocational Training at the Institute for Automation and Applied Informatics (IAI).</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="white-space-50"></div>
+                </div>
+
+                <!-- Skills, Interests & Certificates -->
+                <div class="col-xs-12 col-sm-5">
+                  <div class="white-space-10"></div>
+
+                  <!-- Language Skills -->
+                  <div class="block-title">
+                    <h3>Language <span>Skills</span></h3>
+                  </div>
+
+                  <div class="skills-info skills-second-style">
+                    <!-- Skill 1 -->
+                    <div class="skill clearfix">
+                      <h4>German</h4>
+                      <div class="skill-value">100%</div>
+                    </div>
+                    <div class="skill-container skill-1">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 1 -->
+
+                    <!-- Skill 2 -->
+                    <div class="skill clearfix">
+                      <h4>English</h4>
+                      <div class="skill-value">90%</div>
+                    </div>
+                    <div class="skill-container skill-2">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 2 -->
+                    
+                    <!-- Skill 3 -->
+                    <div class="skill clearfix">
+                      <h4>Dutch</h4>
+                      <div class="skill-value">50%</div>
+                    </div>
+                    <div class="skill-container skill-3">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 3 -->
+                    
+                    <!-- Skill 4 -->
+                    <div class="skill clearfix">
+                      <h4>1337</h4>
+                      <div class="skill-value">13,37%</div>
+                    </div>
+                    <div class="skill-container skill-4">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 4 -->       
+
+                    <!-- Skill 5 -->
+                    <div class="skill clearfix">
+                      <h4>Bash</h4>
+                      <div class="skill-value">95%</div>
+                    </div>
+                    <div class="skill-container skill-5">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 5 -->   
+
+                    <!-- Skill 6 -->
+                    <div class="skill clearfix">
+                      <h4>Python</h4>
+                      <div class="skill-value">65%</div>
+                    </div>
+                    <div class="skill-container skill-6">
+                      <div class="skill-percentage"></div>
+                    </div>
+                    <!-- End of Skill 6 -->                           
+                  </div>
+                  <!-- End of Language Skills -->
+
+                  <!-- Skills Block -->
+                  <div class="block-title">
+                    <h3>Skills, Certificates and Honors</h3>
+                  </div>
+
+                  <ul class="knowledges">
+                    <li>Linux</li>
+                    <li>Ansible</li>
+                    <li>Puppet</li>
+                    <li>Kubernetes</li>
+                    <li>CI/CD</li>
+                    <li>DevOps</li>
+                    <li>Git</li>
+                    <li>IT-Security</li>
+                    <li>ISO/IEC 27001</li>
+                    <li>KritisV</li>
+                    <li>Databases</li>
+                    <li>Storage Systems</li>
+                    <li>Veeam</li>
+                    <li>CCNA</li>
+                    <li>VMWare</li>
+                    <li>Unix</li>
+                    <li>macOS</li>
+                    <li>Windows</li>
+                    <li>Teambuilding</li>
+                    <li>Communication skills</li>
+                    <li>Patience</li>
+                    <li>Network with people</li>
+                    <li>Self-motivation</li>
+                    <li>Working well under pressure</li>
+                    <li>Excellent negotiation skills</li>
+                    <li>Willingness to take initiative</li>
+                    <li>Truppmann</li>
+                    <li>Truppf&uuml;hrer</li>
+                    <li>Sprechfunker</li>
+                    <li>Atemschutzger&auml;tetr&auml;ger</li>
+                    <li>Atemschutzger&auml;tetr&auml;ger Fortbildung</li>
+                    <li>Chemikalienschutzanzugtr&auml;ger</li>
+                    <li>Erste Hilfe</li>
+                    <li>Motors&auml;genführer</li>
+                    <li>Gefahrguterstma&szlig;nahmen</li>
+                    <li>Deutsches Schwimmabzeichen Bronze</li>
+                    <li>T&uuml;r&ouml;ffnungstechniken</li>
+                    <li>Messpraktikum</li>
+                    <li>Pressearbeit an der Einsatzstelle</li>
+                    <li>Drohnenpilot A1/A3</li>
+                    <li>Maschinist</li>
+                    <li>Mobile &Uuml;bungsanlage Binnengew&auml;sser</li>
+                    <li>Absturzsicherung</li>
+                    <li>Fahrsicherheitstraining Feuerwehr</li>
+                    <li>Drivers license classes A, B, BE, C1, C1E, C, CE, L, T</li>
+                    <li>Fluthilfemedallie Rheinland-Pfalz 2021</li>
+                  </ul>
+                  <!-- End of Skills -->
+
+                  <div class="white-space-50"></div>
+
+                  <!-- Interests Block -->
+                  <div class="block-title">
+                    <h3>Interests</h3>
+                  </div>
+
+                  <ul class="knowledges">
+                    <li>Firefighting</li>
+                    <li>Ice Hockey</li>
+                    <li>Family and Friends</li>
+                    <li>American Football</li>
+                    <li>Travelling</li>
+                    <li>Aviation</li>
+                    <li>Automotive engineering</li>
+                    <li>Electrical engineering</li>
+                    <li>Computer engineering</li>
+                    <li>Build Linux based servers</li>
+                    <li>Running own Linux servers</li>
+                  </ul>
+                  <!-- End of Interests -->                      
+                </div>
+                <!-- End of Skills & Interests -->
+              
+              <div class="white-space-50"></div>
+
+                </div>
+              </div>
+              <!-- End of Skills, Interests & Certificates -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto text-center">
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:christian@baumannmail.com">christian at baumannmail dot com</a></p>
+                    <p><i class="fas fa-key"></i> GPG-Key: <a href="https://keys.openpgp.org/search?q=christian@baumannmail.com">keys.openpgp.org/search?q=christian@baumannmail.com</a></p>
+                    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/christian-baumann1990/">linkedin.com/in/christian-baumann1990</a></p>
+                    <p><i class="fab fa-xing"></i> Xing: <a href="https://www.xing.com/profile/Christian_Baumann81/cv">xing.com/profile/Christian_Baumann81/cv</a></p>
+                    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/siliconserver">github.com/siliconserver</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p><a href="privacy.html">Privacy Policy</a> &#124; <a href="legal.html">Legal Details</a><br>
+            v2.01~git &#124; last update: 2024-09-01<br>
+            &copy; 2024 Christian Baumann. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
 </html>
