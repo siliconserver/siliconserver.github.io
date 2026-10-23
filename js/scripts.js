@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Live typing effect
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Live typing effect (the full name is in the HTML, so it still shows without JS)
     function typeEffect(element, text, delay = 100) {
         let i = 0;
+        element.textContent = '';
         function type() {
             if (i < text.length) {
-                element.innerHTML += text.charAt(i);
+                element.textContent += text.charAt(i);
                 i++;
                 setTimeout(type, delay);
             }
@@ -13,32 +16,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const heroTitle = document.getElementById('typing-text');
-    const heroSubtitle = document.getElementById('typing-subtext');
+    if (heroTitle && !reduceMotion) {
+        typeEffect(heroTitle, heroTitle.dataset.text || heroTitle.textContent, 100);
+    }
 
-    typeEffect(heroTitle, "Christian Baumann", 100);
-    setTimeout(() => {
-        typeEffect(heroSubtitle, "I'm a Placeholder", 100);
-    }, 2000); // Adjust the delay for the second text
+    // Navbar: solid background once the page is scrolled
+    const nav = document.getElementById('mainNav');
+    function updateNav() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+    }
+    if (nav) {
+        updateNav();
+        window.addEventListener('scroll', updateNav, { passive: true });
 
-    // Smooth scrolling
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            
-            if (targetId) {
-                const targetElement = document.getElementById(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Adjust for fixed navbar height
-                    behavior: 'smooth'
+        // Solid background while the mobile menu is open, and close it after a click
+        if (window.jQuery) {
+            const $collapse = window.jQuery('#navbarNav');
+            $collapse.on('show.bs.collapse', function() { nav.classList.add('menu-open'); });
+            $collapse.on('hidden.bs.collapse', function() { nav.classList.remove('menu-open'); });
+            nav.querySelectorAll('.nav-link').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if ($collapse.hasClass('show')) {
+                        $collapse.collapse('hide');
+                    }
                 });
-            } else {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+            });
+        }
+    }
+
+    // Reveal elements as they scroll into view
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !reduceMotion) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealItems.forEach(function(el) { observer.observe(el); });
+    } else {
+        revealItems.forEach(function(el) { el.classList.add('visible'); });
+    }
 });
